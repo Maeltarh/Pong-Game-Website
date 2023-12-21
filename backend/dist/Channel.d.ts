@@ -1,0 +1,36 @@
+import Message from "./Message";
+export default class Channel {
+    private name;
+    private members;
+    private messages;
+    private banned;
+    private owner;
+    private password;
+    private admins;
+    private type;
+    private muted;
+    private invited;
+    constructor(name: string, type: string, owner: string, password: string);
+    getName(): string;
+    getMembers(): string[];
+    getMessages(): Message[];
+    getBanned(): string[];
+    getOwner(): string;
+    getPassword(): string;
+    getAdmins(): string[];
+    getType(): string;
+    getMuted(): string[];
+    getInvited(): string[];
+    addMember(user: string): void;
+    removeMember(user: string): void;
+    addMessage(message: Message): void;
+    banMember(user: string): void;
+    setPassword(password: string): void;
+    addAdmin(user: string): void;
+    removeAdmin(user: string): void;
+    muteMember(user: string): void;
+    unMuteMember(user: string): void;
+    inviteMember(user: string): void;
+    uninviteMember(user: string): void;
+    setType(type: string): void;
+}

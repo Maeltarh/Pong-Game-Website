@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+
+  backend:
+    build: ./backend
+    ports:
+      - "3001:3001"
+      - "3002:3002"
+    environment:
+      - DATABASE_URL=postgres:5432
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:13
+    container_name: my_postgres_container
+    environment:
+      POSTGRES_DB: transBase
+      POSTGRES_USER: mhugueno
+      POSTGRES_PASSWORD: test
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+volumes:
+  pg_data:

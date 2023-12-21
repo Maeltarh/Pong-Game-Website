@@ -1,0 +1,2521 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   App.css                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gsaile <gsaile@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/08/10 17:08:53 by mhugueno          #+#    #+#             */
+/*   Updated: 2023/12/21 20:00:20 by gsaile           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+body {
+  margin: 0;
+}
+
+  section {
+    height: 100vh;
+    width: 100vw;
+    perspective: 800px;
+    overflow: hidden;
+    background-image: linear-gradient(to top, #0f0209, #23061d, #330531, #3e024b, #41056a, #520578, #640385, #770092, #9b0089, #b8007e, #ce1173, #e03168);
+  }
+  
+  .wall {
+    background-size: 40px 40px;
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, .2) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, .2) 1px, transparent 1px);
+    height: inherit;
+    transform: rotateX(35deg);
+    transform-origin: top center;
+    animation: 60s linear infinite crawlingWall;
+    background-position-y: top;
+  }
+
+  @keyframes crawlingWall {
+    to {
+      background-position-y: bottom;
+    }
+}                                                                                                                                    
+
+/*
+MMMMMMMM               MMMMMMMM                                                        
+M:::::::M             M:::::::M                                                        
+M::::::::M           M::::::::M                                                        
+M:::::::::M         M:::::::::M                                                        
+M::::::::::M       M::::::::::M    eeeeeeeeeeee    nnnn  nnnnnnnn    uuuuuu    uuuuuu  
+M:::::::::::M     M:::::::::::M  ee::::::::::::ee  n:::nn::::::::nn  u::::u    u::::u  
+M:::::::M::::M   M::::M:::::::M e::::::eeeee:::::een::::::::::::::nn u::::u    u::::u  
+M::::::M M::::M M::::M M::::::Me::::::e     e:::::enn:::::::::::::::nu::::u    u::::u  
+M::::::M  M::::M::::M  M::::::Me:::::::eeeee::::::e  n:::::nnnn:::::nu::::u    u::::u  
+M::::::M   M:::::::M   M::::::Me:::::::::::::::::e   n::::n    n::::nu::::u    u::::u  
+M::::::M    M:::::M    M::::::Me::::::eeeeeeeeeee    n::::n    n::::nu::::u    u::::u  
+M::::::M     MMMMM     M::::::Me:::::::e             n::::n    n::::nu:::::uuuu:::::u  
+M::::::M               M::::::Me::::::::e            n::::n    n::::nu:::::::::::::::uu
+M::::::M               M::::::M e::::::::eeeeeeee    n::::n    n::::n u:::::::::::::::u
+M::::::M               M::::::M  ee:::::::::::::e    n::::n    n::::n  uu::::::::uu:::u
+MMMMMMMM               MMMMMMMM    eeeeeeeeeeeeee    nnnnnn    nnnnnn    uuuuuuuu  uuuu
+*/
+
+.title {
+  position: absolute;
+  top: 3.8%;
+  left: 3.3%;
+  width: 10vw;
+  height: 10vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1.5vw + 2vh);
+  letter-spacing: 1px;
+  border: 3px solid transparent;
+  margin: 0px 0px;
+  cursor: pointer;
+}
+
+.mute-button {
+  position: absolute;
+  top: 91.5%;
+  left: 12%;
+  width: 3.5vw;
+  height: 7vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding-left: 6px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1vw + 1.5vh);
+  letter-spacing: 0px;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 360px;
+  margin: 0px 0px;
+  cursor: pointer;
+}
+
+.cadre-sup {
+  position: absolute;
+  top: 1%;
+  left: 17%;
+  width: 60vw;
+  height: 10vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1.5vw + 2vh);
+  letter-spacing: 1px;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cadre-game {
+  position: absolute;
+  top: 12%;
+  left: 17%;
+  width: 60vw;
+  height: 86.5vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1.5vw + 2vh);
+  letter-spacing: 1px;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+}
+
+.cadre-social {
+  position: absolute;
+  top: 12%;
+  left: 77.5%;
+  width: 21.1vw;
+  height: 77vh;
+  box-sizing: border-box;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1.5vw + 2vh);
+  letter-spacing: 1px;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0;
+  overflow-y: auto;
+}
+
+.cadre-friendList {
+  position: absolute;
+  top: 1%;
+  left: 77.5%;
+  width: 21.13vw;
+  height: 10.5vh;
+  box-sizing: border-box;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1.5vw + 2vh);
+  letter-spacing: 1px;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+  cursor: pointer;
+}
+
+.cadre-chat {
+  box-sizing: border-box;
+  position: absolute;
+  top: 89%;
+  left: 77.5%;
+  width: 21.2vw;
+  height: 10vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1.25vw + 1.75vh);
+  letter-spacing: 1px;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+  cursor: text;
+}
+
+.jouer-button {
+  position: absolute;
+  top: 20%;
+  left: 1%;
+  width: 14.5vw;
+  height: 11vh;
+  line-height: 2.75vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1.25vw + 1.75vh);
+  letter-spacing: 1px;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+  cursor: pointer;
+}
+
+.profile-button {
+  position: absolute;
+  top: 32%;
+  left: 1%;
+  width: 14.5vw;
+  height: 5vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(0.5vw + 1vh);
+  letter-spacing: 1px;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+  cursor: pointer;
+}
+
+.historique-button {
+  position: absolute;
+  top: 38%;
+  left: 1%;
+  width: 14.5vw;
+  height: 5vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(0.5vw + 1vh);
+  letter-spacing: 1px;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+  cursor: pointer;
+}
+
+.leaderboard-button {
+  position: absolute;
+  top: 44%;
+  left: 1%;
+  width: 14.5vw;
+  height: 5vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(0.5vw + 1vh);
+  letter-spacing: 1px;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+  cursor: pointer;
+}
+
+.personnalisation-button {
+  position: absolute;
+  top: 50%;
+  left: 1%;
+  width: 14.5vw;
+  height: 5vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(0.5vw + 1vh);
+  letter-spacing: 1px;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+  cursor: pointer;
+}
+
+.controle-button {
+  position: absolute;
+  top: 56%;
+  left: 1%;
+  width: 14.5vw;
+  height: 5vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(0.5vw + 1vh);
+  letter-spacing: 1px;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+  cursor: pointer;
+}
+
+.option-button {
+  position: absolute;
+  top: 62%;
+  left: 1%;
+  width: 14.5vw;
+  height: 5vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(0.5vw + 1vh);
+  letter-spacing: 1px;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+  cursor: pointer;
+}
+
+.credit-button {
+  position: absolute;
+  top: 68%;
+  left: 1%;
+  width: 14.5vw;
+  height: 5vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(0.5vw + 1vh);
+  letter-spacing: 1px;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+  cursor: pointer;
+}
+
+.bouton-anime:active {
+  transform: scale(0.9);
+}
+
+/*
+PPPPPPPPPPPPPPPPP                                           ffffffffffffffff    iiii  lllllll                     
+P::::::::::::::::P                                         f::::::::::::::::f  i::::i l:::::l                     
+P::::::PPPPPP:::::P                                       f::::::::::::::::::f  iiii  l:::::l                     
+PP:::::P     P:::::P                                      f::::::fffffff:::::f        l:::::l                     
+  P::::P     P:::::Prrrrr   rrrrrrrrr      ooooooooooo    f:::::f       ffffffiiiiiii  l::::l     eeeeeeeeeeee    
+  P::::P     P:::::Pr::::rrr:::::::::r   oo:::::::::::oo  f:::::f             i:::::i  l::::l   ee::::::::::::ee  
+  P::::PPPPPP:::::P r:::::::::::::::::r o:::::::::::::::of:::::::ffffff        i::::i  l::::l  e::::::eeeee:::::ee
+  P:::::::::::::PP  rr::::::rrrrr::::::ro:::::ooooo:::::of::::::::::::f        i::::i  l::::l e::::::e     e:::::e
+  P::::PPPPPPPPP     r:::::r     r:::::ro::::o     o::::of::::::::::::f        i::::i  l::::l e:::::::eeeee::::::e
+  P::::P             r:::::r     rrrrrrro::::o     o::::of:::::::ffffff        i::::i  l::::l e:::::::::::::::::e 
+  P::::P             r:::::r            o::::o     o::::o f:::::f              i::::i  l::::l e::::::eeeeeeeeeee  
+  P::::P             r:::::r            o::::o     o::::o f:::::f              i::::i  l::::l e:::::::e           
+PP::::::PP           r:::::r            o:::::ooooo:::::of:::::::f            i::::::il::::::le::::::::e          
+P::::::::P           r:::::r            o:::::::::::::::of:::::::f            i::::::il::::::l e::::::::eeeeeeee  
+P::::::::P           r:::::r             oo:::::::::::oo f:::::::f            i::::::il::::::l  ee:::::::::::::e  
+PPPPPPPPPP           rrrrrrr               ooooooooooo   fffffffff            iiiiiiiillllllll    eeeeeeeeeeeeee                                                                                                                      
+ */
+
+.deco-button {
+  position: absolute;
+  top: 18.5%;
+  left: 19.5%;
+  width: 20.5vw;
+  height: 11vh;
+  line-height: 2.75vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1.25vw + 1.75vh);
+  letter-spacing: 1px;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+  cursor: pointer;
+}
+
+.elo-button {
+  position: absolute;
+  top: 23.5%;
+  left: 56.5%;
+  width: 14.5vw;
+  height: 11vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1.5vw + 2vh);
+  letter-spacing: 1px;
+  border: 3px solid transparent;
+  border-radius: 8px;
+  margin: 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar-css {
+  position: absolute;
+  top: 15%;
+  left: 42.5%;
+  width: 9vw;
+  height: 16vh;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 45px;
+}
+
+.nom-button {
+  position: absolute;
+  top: 11.5%;
+  left: 56.5%;
+  width: 14.5vw;
+  height: 11vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1.5vw + 2vh);
+  letter-spacing: 1px;
+  border: 3px solid transparent;
+  border-radius: 8px;
+  margin: 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lvl-button {
+  position: absolute;
+  top: 17.5%;
+  left: 56.5%;
+  width: 14.5vw;
+  height: 11vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1.5vw + 2vh);
+  letter-spacing: 1px;
+  border: 3px solid transparent;
+  border-radius: 8px;
+  margin: 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pourcent-button {
+  position: absolute;
+  top: 28%;
+  left: 39.7%;
+  width: 14.5vw;
+  height: 11vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1vw + 1.5vh);
+  letter-spacing: 1px;
+  border: 3px solid transparent;
+  border-radius: 8px;
+  margin: 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.xp-button {
+  position: absolute;
+  top: 35.5%;
+  left: 29.75%;
+  width: 34vw;
+  height: 2vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1.5vw + 2vh);
+  letter-spacing: 1px;
+  border: 3px solid transparent;
+  border-radius: 8px;
+  margin: 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.winrate-button {
+  position: absolute;
+  top: 41%;
+  left: 19.5%;
+  width: 54.7vw;
+  height: 11vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1.5vw + 2vh);
+  word-spacing: 9vw;
+  letter-spacing: 1px;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+  line-height: 11vh;
+  text-align: center;
+}
+
+.mot1 {
+  color: rgb(0, 180, 0);
+}
+
+.color2 {
+  color: rgb(0, 180, 0);
+}
+
+.mot3 {
+  color: rgb(240, 0, 0);
+}
+
+.succes-button {
+  position: absolute;
+  top: 70%;
+  left: 29.75%;
+  width: 34vw;
+  height: 6vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1.5vw + 2vh);
+  letter-spacing: 1px;
+  border: 3px solid transparent(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gameCount-text {
+  position: absolute;
+  top: 65%;
+  left: 29.75%;
+  width: 34vw;
+  height: 6vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1.5vw + 2vh);
+  letter-spacing: 1px;
+  border: 3px solid transparent(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gameCount {
+  position: absolute;
+  top: 70%;
+  left: 29.75%;
+  width: 34vw;
+  height: 6vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1vw + 1.5vh);
+  letter-spacing: 1px;
+  border: 3px solid transparent(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*
+HHHHHHHHH     HHHHHHHHH  iiii                            tttt                                                iiii                                                            
+H:::::::H     H:::::::H i::::i                        ttt:::t                                               i::::i                                                           
+H:::::::H     H:::::::H  iiii                         t:::::t                                                iiii                                                            
+HH::::::H     H::::::HH                               t:::::t                                                                                                                
+  H:::::H     H:::::H  iiiiiii     ssssssssss   ttttttt:::::ttttttt       ooooooooooo   rrrrr   rrrrrrrrr  iiiiiii    qqqqqqqqq   qqqqquuuuuu    uuuuuu      eeeeeeeeeeee    
+  H:::::H     H:::::H  i:::::i   ss::::::::::s  t:::::::::::::::::t     oo:::::::::::oo r::::rrr:::::::::r i:::::i   q:::::::::qqq::::qu::::u    u::::u    ee::::::::::::ee  
+  H::::::HHHHH::::::H   i::::i ss:::::::::::::s t:::::::::::::::::t    o:::::::::::::::or:::::::::::::::::r i::::i  q:::::::::::::::::qu::::u    u::::u   e::::::eeeee:::::ee
+  H:::::::::::::::::H   i::::i s::::::ssss:::::stttttt:::::::tttttt    o:::::ooooo:::::orr::::::rrrrr::::::ri::::i q::::::qqqqq::::::qqu::::u    u::::u  e::::::e     e:::::e
+  H:::::::::::::::::H   i::::i  s:::::s  ssssss       t:::::t          o::::o     o::::o r:::::r     r:::::ri::::i q:::::q     q:::::q u::::u    u::::u  e:::::::eeeee::::::e
+  H::::::HHHHH::::::H   i::::i    s::::::s            t:::::t          o::::o     o::::o r:::::r     rrrrrrri::::i q:::::q     q:::::q u::::u    u::::u  e:::::::::::::::::e 
+  H:::::H     H:::::H   i::::i       s::::::s         t:::::t          o::::o     o::::o r:::::r            i::::i q:::::q     q:::::q u::::u    u::::u  e::::::eeeeeeeeeee  
+  H:::::H     H:::::H   i::::i ssssss   s:::::s       t:::::t    tttttto::::o     o::::o r:::::r            i::::i q::::::q    q:::::q u:::::uuuu:::::u  e:::::::e           
+HH::::::H     H::::::HHi::::::is:::::ssss::::::s      t::::::tttt:::::to:::::ooooo:::::o r:::::r           i::::::iq:::::::qqqqq:::::q u:::::::::::::::uue::::::::e          
+H:::::::H     H:::::::Hi::::::is::::::::::::::s       tt::::::::::::::to:::::::::::::::o r:::::r           i::::::i q::::::::::::::::q  u:::::::::::::::u e::::::::eeeeeeee  
+H:::::::H     H:::::::Hi::::::i s:::::::::::ss          tt:::::::::::tt oo:::::::::::oo  r:::::r           i::::::i  qq::::::::::::::q   uu::::::::uu:::u  ee:::::::::::::e  
+HHHHHHHHH     HHHHHHHHHiiiiiiii  sssssssssss              ttttttttttt     ooooooooooo    rrrrrrr           iiiiiiii    qqqqqqqq::::::q     uuuuuuuu  uuuu    eeeeeeeeeeeeee  
+                                                                                                                               q:::::q                                       
+                                                                                                                               q:::::q                                       
+                                                                                                                              q:::::::q                                      
+                                                                                                                              q:::::::q                                      
+                                                                                                                              q:::::::q                                      
+                                                                                                                              qqqqqqqqq                                      
+*/
+
+.listOfGame-button {
+  position: absolute;
+  top: 16.5%;
+  left: 19.5%;
+  width: 12.5vw;
+  height: 78vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1.5vw + 2vh);
+  letter-spacing: 1px;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+}
+
+.userInList1-button {
+  position: absolute;
+  top: 1%;
+  left: 3%;
+  width: 11.5vw;
+  height: 14.4vh;
+  line-height: calc(2vw + 2.5vh);
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1vw + 1.5vh);
+  letter-spacing: 1px;
+  border: 1.5px solid rgba(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+  cursor: pointer;
+}
+
+.userInList2-button {
+  position: absolute;
+  top: 20.85%;
+  left: 3%;
+  width: 11.5vw;
+  height: 14.4vh;
+  line-height: calc(2vw + 2.5vh);
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1vw + 1.5vh);
+  letter-spacing: 1px;
+  border: 1.5px solid rgba(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+  cursor: pointer;
+}
+
+.userInList3-button {
+  position: absolute;
+  top: 40.7%;
+  left: 3%;
+  width: 11.5vw;
+  height: 14.4vh;
+  line-height: calc(2vw + 2.5vh);
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1vw + 1.5vh);
+  letter-spacing: 1px;
+  border: 1.5px solid rgba(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+  cursor: pointer;
+}
+
+.userInList4-button {
+  position: absolute;
+  top: 60.65%;
+  left: 3%;
+  width: 11.5vw;
+  height: 14.4vh;
+  line-height: calc(2vw + 2.5vh);
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1vw + 1.5vh);
+  letter-spacing: 1px;
+  border: 1.5px solid rgba(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+  cursor: pointer;
+}
+
+.userInList5-button {
+  position: absolute;
+  top: 80.4%;
+  left: 3%;
+  width: 11.5vw;
+  height: 14.2vh;
+  line-height: calc(2vw + 2.5vh);
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1vw + 1.5vh);
+  letter-spacing: 1px;
+  border: 1.5px solid rgba(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+  cursor: pointer;
+}
+
+.cadrePartie-button {
+  position: absolute;
+  top: 16.5%;
+  left: 33%;
+  width: 41.6vw;
+  height: 78vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1.5vw + 2vh);
+  letter-spacing: 1px;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+}
+
+.user1-button {
+  position: absolute;
+  top: 20%;
+  left: 0%;
+  width: 19.5vw;
+  height: 9vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1.5vw + 2vh);
+  letter-spacing: 1px;
+  word-spacing: 150px;
+  border: 3px solid transparent;
+  margin: 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vs-button {
+  position: absolute;
+  top: 20%;
+  left: 0%;
+  width: 41.5vw;
+  height: 9vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1.5vw + 2vh);
+  letter-spacing: 1px;
+  word-spacing: 150px;
+  border: 3px solid transparent;
+  margin: 0px 0px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user2-button {
+  position: absolute;
+  top: 20%;
+  left: 53%;
+  width: 19.5vw;
+  height: 9vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1.5vw + 2vh);
+  letter-spacing: 1px;
+  word-spacing: 150px;
+  border: 3px solid transparent;
+  margin: 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toimage-button {
+  position: absolute;
+  top: 4.5%;
+  left: 16%;
+  width: 6vw;
+  height: 6vw;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1.5vw + 2vh);
+  letter-spacing: 1px;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 100px;
+  margin: 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ennemimage-button {
+  position: absolute;
+  top: 4.5%;
+  left: 69%;
+  width: 6vw;
+  height: 6vw;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1.5vw + 2vh);
+  letter-spacing: 1px;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 100px;
+  margin: 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.eloToi-button {
+  position: absolute;
+  top: 30%;
+  left: 11.5%;
+  width: 10vw;
+  height: 7.5vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1.5vw + 2vh);
+  letter-spacing: 1px;
+  border: 3px solid transparent;
+  border-radius: 8px;
+  margin: 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.eloEnnemie-button {
+  position: absolute;
+  top: 30%;
+  left: 64.75%;
+  width: 10vw;
+  height: 7.5vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1.5vw + 2vh);
+  letter-spacing: 1px;
+  border: 3px solid transparent;
+  border-radius: 8px;
+  margin: 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.eloResultat-button {
+  position: absolute;
+  top: 47%;
+  left: 24.5%;
+  width: 20vw;
+  height: 15vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(2.75vw + 3.25vh);
+  letter-spacing: 1px;
+  border: 3px solid transparent;
+  border-radius: 8px;
+  margin: 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.score-button {
+  position: absolute;
+  top: 75%;
+  left: 4%;
+  width: 38vw;
+  height: 18vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(3.25vw + 3.75vh);
+  border: 3px solid transparent;
+  border-radius: 8px;
+  margin: 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*
+                                                     dddddddd            dddddddd                                        
+LLLLLLLLLLL                                          d::::::d            d::::::d                                        
+L:::::::::L                                          d::::::d            d::::::d                                        
+L:::::::::L                                          d::::::d            d::::::d                                        
+LL:::::::LL                                          d:::::d             d:::::d                                         
+  L:::::L                 aaaaaaaaaaaaa      ddddddddd:::::d     ddddddddd:::::d     eeeeeeeeeeee    rrrrr   rrrrrrrrr   
+  L:::::L                 a::::::::::::a   dd::::::::::::::d   dd::::::::::::::d   ee::::::::::::ee  r::::rrr:::::::::r  
+  L:::::L                 aaaaaaaaa:::::a d::::::::::::::::d  d::::::::::::::::d  e::::::eeeee:::::eer:::::::::::::::::r 
+  L:::::L                          a::::ad:::::::ddddd:::::d d:::::::ddddd:::::d e::::::e     e:::::err::::::rrrrr::::::r
+  L:::::L                   aaaaaaa:::::ad::::::d    d:::::d d::::::d    d:::::d e:::::::eeeee::::::e r:::::r     r:::::r
+  L:::::L                 aa::::::::::::ad:::::d     d:::::d d:::::d     d:::::d e:::::::::::::::::e  r:::::r     rrrrrrr
+  L:::::L                a::::aaaa::::::ad:::::d     d:::::d d:::::d     d:::::d e::::::eeeeeeeeeee   r:::::r            
+  L:::::L         LLLLLLa::::a    a:::::ad:::::d     d:::::d d:::::d     d:::::d e:::::::e            r:::::r            
+LL:::::::LLLLLLLLL:::::La::::a    a:::::ad::::::ddddd::::::ddd::::::ddddd::::::dde::::::::e           r:::::r            
+L::::::::::::::::::::::La:::::aaaa::::::a d:::::::::::::::::d d:::::::::::::::::d e::::::::eeeeeeee   r:::::r            
+L::::::::::::::::::::::L a::::::::::aa:::a d:::::::::ddd::::d  d:::::::::ddd::::d  ee:::::::::::::e   r:::::r            
+LLLLLLLLLLLLLLLLLLLLLLLL  aaaaaaaaaa  aaaa  ddddddddd   ddddd   ddddddddd   ddddd    eeeeeeeeeeeeee   rrrrrrr            
+*/
+
+.firstImage-button {
+  position: absolute;
+  top: 15%;
+  left: 43.85%;
+  width: 4.5vw;
+  height: 9vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1.5vw + 2vh);
+  letter-spacing: 1px;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 100px;
+  margin: 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.firstLadder-button {
+  position: absolute;
+  top: 21%;
+  left: 36.25%;
+  width: 20vw;
+  height: 10vh;
+  background-color: transparent;
+  color: rgba(212, 175, 55, 1);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1vw + 1.5vh);
+  letter-spacing: 0px;
+  border: 3px solid transparent;
+  border-radius: 8px;
+  margin: 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.secondImage-button {
+  position: absolute;
+  top: 22%;
+  left: 27.5%;
+  width: 4.5vw;
+  height: 9vh;
+  background-color: transparent;
+  color: rgba(192, 192, 192, 1);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1.5vw + 2vh);
+  letter-spacing: 1px;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 100px;
+  margin: 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.secondLadder-button {
+  position: absolute;
+  top: 28%;
+  left: 19.85%;
+  width: 20vw;
+  height: 10vh;
+  background-color: transparent;
+  color: rgba(192, 192, 192, 1);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1vw + 1.5vh);
+  letter-spacing: 0px;
+  border: 3px solid transparent;
+  border-radius: 8px;
+  margin: 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.thirdImage-button {
+  position: absolute;
+  top: 22%;
+  left: 60%;
+  width: 4.5vw;
+  height: 9vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1.5vw + 2vh);
+  letter-spacing: 1px;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 100px;
+  margin: 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.thirdLadder-button {
+  position: absolute;
+  top: 28%;
+  left: 52.3%;
+  width: 20vw;
+  height: 10vh;
+  background-color: transparent;
+  color: rgba(205, 127, 50, 1);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1vw + 1.5vh);
+  letter-spacing: 0px;
+  border: 3px solid transparent;
+  border-radius: 8px;
+  margin: 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loserLadder-button {
+  position: absolute;
+  top: 45%;
+  left: 30%;
+  width: 20vw;
+  height: 25vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1vw + 1.5vh);
+  word-spacing: 25px;
+  letter-spacing: 0px;
+  border: 3px solid transparent;
+  border-radius: 8px;
+  margin: 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loserLadderElo-button {
+  position: absolute;
+  top: 45%;
+  left: 43.7%;
+  width: 20vw;
+  height: 25vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1vw + 1.5vh);
+  word-spacing: 25px;
+  letter-spacing: 0px;
+  border: 3px solid transparent;
+  border-radius: 8px;
+  margin: 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toiCadreLadder-button {
+  position: absolute;
+  top: 82%;
+  left: 31.25%;
+  width: 30vw;
+  height: 10vh;
+  background-color: transparent;
+  color: rgba(195, 171, 195, 0.989);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(2vw + 2.5vh);
+  letter-spacing: 0px;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*
+        CCCCCCCCCCCCC                                            tttt                                              lllllll                     
+     CCC::::::::::::C                                         ttt:::t                                              l:::::l                     
+   CC:::::::::::::::C                                         t:::::t                                              l:::::l                     
+  C:::::CCCCCCCC::::C                                         t:::::t                                              l:::::l                     
+ C:::::C       CCCCCC   ooooooooooo   nnnn  nnnnnnnn    ttttttt:::::ttttttt   rrrrr   rrrrrrrrr      ooooooooooo    l::::l     eeeeeeeeeeee    
+C:::::C               oo:::::::::::oo n:::nn::::::::nn  t:::::::::::::::::t   r::::rrr:::::::::r   oo:::::::::::oo  l::::l   ee::::::::::::ee  
+C:::::C              o:::::::::::::::on::::::::::::::nn t:::::::::::::::::t   r:::::::::::::::::r o:::::::::::::::o l::::l  e::::::eeeee:::::ee
+C:::::C              o:::::ooooo:::::onn:::::::::::::::ntttttt:::::::tttttt   rr::::::rrrrr::::::ro:::::ooooo:::::o l::::l e::::::e     e:::::e
+C:::::C              o::::o     o::::o  n:::::nnnn:::::n      t:::::t          r:::::r     r:::::ro::::o     o::::o l::::l e:::::::eeeee::::::e
+C:::::C              o::::o     o::::o  n::::n    n::::n      t:::::t          r:::::r     rrrrrrro::::o     o::::o l::::l e:::::::::::::::::e 
+C:::::C              o::::o     o::::o  n::::n    n::::n      t:::::t          r:::::r            o::::o     o::::o l::::l e::::::eeeeeeeeeee  
+ C:::::C       CCCCCCo::::o     o::::o  n::::n    n::::n      t:::::t    ttttttr:::::r            o::::o     o::::o l::::l e:::::::e           
+  C:::::CCCCCCCC::::Co:::::ooooo:::::o  n::::n    n::::n      t::::::tttt:::::tr:::::r            o:::::ooooo:::::ol::::::le::::::::e          
+   CC:::::::::::::::Co:::::::::::::::o  n::::n    n::::n      tt::::::::::::::tr:::::r            o:::::::::::::::ol::::::l e::::::::eeeeeeee  
+     CCC::::::::::::C oo:::::::::::oo   n::::n    n::::n        tt:::::::::::ttr:::::r             oo:::::::::::oo l::::::l  ee:::::::::::::e  
+        CCCCCCCCCCCCC   ooooooooooo     nnnnnn    nnnnnn          ttttttttttt  rrrrrrr               ooooooooooo   llllllll    eeeeeeeeeeeeee  
+*/
+
+.W-button {
+  position: absolute;
+  top: 28.7%;
+  left: 25%;
+  width: 6vw;
+  height: 10vh;
+  background-color: transparent;
+  color: rgba(195, 171, 195, 0.989);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(2vw + 2.5vh);
+  letter-spacing: 0px;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+  box-shadow: 7.5px 7.5px 7.5px rgba(0, 0, 0, 0.454);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.S-button {
+  position: absolute;
+  top: 73.5%;
+  left: 25%;
+  width: 6vw;
+  height: 10vh;
+  background-color: transparent;
+  color: rgba(195, 171, 195, 0.989);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(2vw + 2.5vh);
+  letter-spacing: 0px;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+  box-shadow: 7.5px 7.5px 7.5px rgba(0, 0, 0, 0.454);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flecheHaut-button {
+  position: absolute;
+  top: 28.7%;
+  left: 62.8%;
+  width: 6vw;
+  height: 10vh;
+  background-color: transparent;
+  color: rgba(195, 171, 195, 0.989);
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(2vw + 2.5vh);
+  letter-spacing: 0px;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+  box-shadow: 7.5px 7.5px 7.5px rgba(0, 0, 0, 0.454);
+  line-height: 8vh;
+  text-align: center;
+}
+
+.flecheBas-button {
+  position: absolute;
+  top: 73.5%;
+  left: 62.8%;
+  width: 6vw;
+  height: 10vh;
+  background-color: transparent;
+  color: rgba(195, 171, 195, 0.989);
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(2vw + 2.5vh);
+  letter-spacing: 0px;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+  box-shadow: 7.5px 7.5px 7.5px rgba(0, 0, 0, 0.454);
+  line-height: 8vh;
+  text-align: center;
+}
+
+.texteHaut-button {
+  position: absolute;
+  top: 28.7%;
+  left: 17%;
+  width: 60vw;
+  height: 10vh;
+  background-color: transparent;
+  color: rgba(195, 171, 195, 0.989);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(2vw + 2.5vh);
+  letter-spacing: 0px;
+  border: 3px solid transparent;
+  border-radius: 8px;
+  margin: 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.texteBas-button {
+  position: absolute;
+  top: 73.5%;
+  left: 17%;
+  width: 60vw;
+  height: 10vh;
+  background-color: transparent;
+  color: rgba(195, 171, 195, 0.989);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(2vw + 2.5vh);
+  letter-spacing: 0px;
+  border: 3px solid transparent;
+  border-radius: 8px;
+  margin: 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*
+                                                                         dddddddd                              
+        CCCCCCCCCCCCC                                                    d::::::d  iiii          tttt          
+     CCC::::::::::::C                                                    d::::::d i::::i      ttt:::t          
+   CC:::::::::::::::C                                                    d::::::d  iiii       t:::::t          
+  C:::::CCCCCCCC::::C                                                    d:::::d              t:::::t          
+ C:::::C       CCCCCCrrrrr   rrrrrrrrr       eeeeeeeeeeee        ddddddddd:::::d iiiiiiittttttt:::::ttttttt    
+C:::::C              r::::rrr:::::::::r    ee::::::::::::ee    dd::::::::::::::d i:::::it:::::::::::::::::t    
+C:::::C              r:::::::::::::::::r  e::::::eeeee:::::ee d::::::::::::::::d  i::::it:::::::::::::::::t    
+C:::::C              rr::::::rrrrr::::::re::::::e     e:::::ed:::::::ddddd:::::d  i::::itttttt:::::::tttttt    
+C:::::C               r:::::r     r:::::re:::::::eeeee::::::ed::::::d    d:::::d  i::::i      t:::::t          
+C:::::C               r:::::r     rrrrrrre:::::::::::::::::e d:::::d     d:::::d  i::::i      t:::::t          
+C:::::C               r:::::r            e::::::eeeeeeeeeee  d:::::d     d:::::d  i::::i      t:::::t          
+ C:::::C       CCCCCC r:::::r            e:::::::e           d:::::d     d:::::d  i::::i      t:::::t    tttttt
+  C:::::CCCCCCCC::::C r:::::r            e::::::::e          d::::::ddddd::::::ddi::::::i     t::::::tttt:::::t
+   CC:::::::::::::::C r:::::r             e::::::::eeeeeeee   d:::::::::::::::::di::::::i     tt::::::::::::::t
+     CCC::::::::::::C r:::::r              ee:::::::::::::e    d:::::::::ddd::::di::::::i       tt:::::::::::tt
+        CCCCCCCCCCCCC rrrrrrr                eeeeeeeeeeeeee     ddddddddd   dddddiiiiiiii         ttttttttttt  
+*/
+
+.mhugueno-css {
+  position: absolute;
+  top: 44%;
+  left: 20%;
+  width: 54vw;
+  height: 10vh;
+}
+
+.texteMhu-button {
+  position: absolute;
+  top: 55%;
+  left: 17%;
+  width: 60vw;
+  height: 10vh;
+  background-color: transparent;
+  color: rgba(195, 171, 195, 0.989);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(2vw + 2.5vh);
+  letter-spacing: 0px;
+  border: 3px solid transparent;
+  border-radius: 8px;
+  margin: 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mmetzger-css {
+  position: absolute;
+  top: 17.5%;
+  left: 20%;
+  width: 54vw;
+  height: 10vh;
+}
+
+.texteMme-button {
+  position: absolute;
+  top: 28%;
+  left: 17%;
+  width: 60vw;
+  height: 10vh;
+  background-color: transparent;
+  color: rgba(195, 171, 195, 0.989);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(2vw + 2.5vh);
+  letter-spacing: 0px;
+  border: 3px solid transparent;
+  border-radius: 8px;
+  margin: 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gsaile-css {
+  position: absolute;
+  top: 70.5%;
+  left: 20%;
+  width: 54vw;
+  height: 10vh;
+}
+
+.texteGsa-button {
+  position: absolute;
+  top: 82%;
+  left: 17%;
+  width: 60vw;
+  height: 10vh;
+  background-color: transparent;
+  color: rgba(195, 171, 195, 0.989);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(2vw + 2.5vh);
+  letter-spacing: 0px;
+  border: 3px solid transparent;
+  border-radius: 8px;
+  margin: 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*
+PPPPPPPPPPPPPPPPP                                                         
+P::::::::::::::::P                                                        
+P::::::PPPPPP:::::P                                                       
+PP:::::P     P:::::P                                                      
+  P::::P     P:::::P  ooooooooooo   nnnn  nnnnnnnn       ggggggggg   ggggg
+  P::::P     P:::::Poo:::::::::::oo n:::nn::::::::nn    g:::::::::ggg::::g
+  P::::PPPPPP:::::Po:::::::::::::::on::::::::::::::nn  g:::::::::::::::::g
+  P:::::::::::::PP o:::::ooooo:::::onn:::::::::::::::ng::::::ggggg::::::gg
+  P::::PPPPPPPPP   o::::o     o::::o  n:::::nnnn:::::ng:::::g     g:::::g 
+  P::::P           o::::o     o::::o  n::::n    n::::ng:::::g     g:::::g 
+  P::::P           o::::o     o::::o  n::::n    n::::ng:::::g     g:::::g 
+  P::::P           o::::o     o::::o  n::::n    n::::ng::::::g    g:::::g 
+PP::::::PP         o:::::ooooo:::::o  n::::n    n::::ng:::::::ggggg:::::g 
+P::::::::P         o:::::::::::::::o  n::::n    n::::n g::::::::::::::::g 
+P::::::::P          oo:::::::::::oo   n::::n    n::::n  gg::::::::::::::g 
+PPPPPPPPPP            ooooooooooo     nnnnnn    nnnnnn    gggggggg::::::g 
+                                                                  g:::::g 
+                                                      gggggg      g:::::g 
+                                                      g:::::gg   gg:::::g 
+                                                       g::::::ggg:::::::g 
+                                                        gg:::::::::::::g  
+                                                          ggg::::::ggg    
+                                                             gggggg       
+*/
+
+.Lancer-Partie {
+  position: absolute;
+  top: 38%;
+  left: 19%;
+  width: 38vw;
+  height: 18vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(2.25vw + 2.75vh);
+  letter-spacing: 0px;
+  border: 3px solid rgba(232, 216, 230, 0.855);
+  border-radius: 8px;
+  margin: 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pointille-game {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  width: 0vw;
+  height: 86vh;
+  background-color: transparent;
+  color: rgba(195, 171, 195, 0.989);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(2vw + 2.5vh);
+  letter-spacing: 0px;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 0px;
+  margin: 0px 0px;
+}
+
+.bar {
+  position: absolute;
+  left: 1vw;
+  top: 50vh;
+  height: 15svh;
+  width: 0.5vw;
+  border-radius: 8px;
+  background-color: rgba(195, 171, 195, 0.989);
+  transition: top 0.1s;
+}
+
+.vsBar {
+  position: absolute;
+  left: 1vw;
+  top: 50vh;
+  height: 15svh;
+  width: 0.5vw;
+  border-radius: 8px;
+  background-color: rgba(195, 171, 195, 0.989);
+  transition: top 0.1s;
+}
+
+.balle {
+  position: absolute;
+  left: 29.6vw;
+  top: 50vh;
+  height: 1vw;
+  width: 1vw;
+  border-radius: 50%;
+  background-color: rgba(195, 171, 195, 0.989);
+}
+
+.LoginForm {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-size: calc(2vw + 2.5vh);
+  width: 60vw;
+  height: 87vh;
+  border: 3px solid transparent;
+  transform: translate(-50%, -50%);
+}
+
+.loginPLogin {
+  position: absolute;
+  top: 57.9%;
+  left: calc(50% - 10vw);
+  width: 20vw;
+  height: 15vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1.5vw + 2vh);
+  letter-spacing: 0px;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+}
+
+.loginP {
+  position: absolute;
+  top: 26.5%;
+  left: calc(50% - 10vw);
+  width: 20vw;
+  height: 15vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1.5vw + 2vh);
+  letter-spacing: 0px;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+}
+
+.login42 {
+  position: absolute;
+  top: 58%;
+  left: calc(50% - 10vw);
+  width: 20vw;
+  height: 15vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1.5vw + 2vh);
+  letter-spacing: 0px;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+}
+
+.Username {
+  position: absolute;
+  top: 10%;
+  left: calc(50% - 10vw);
+  width: 20vw;
+  height: 2vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1.5vw + 2vh);
+  letter-spacing: 0px;
+  border: 3px solid transparent;
+  border-radius: 8px;
+  margin: 0px 0px;
+}
+
+.Password {
+  position: absolute;
+  top: 34%;
+  left: calc(50% - 10vw);
+  width: 20vw;
+  height: 2vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1.5vw + 2vh);
+  letter-spacing: 0px;
+  border: 3px solid transparent;
+  border-radius: 8px;
+  margin: 0px 0px;
+}
+
+.username-button {
+  position: absolute;
+  top: 19%;
+  left: calc(50% - 10vw);
+  width: 20vw;
+  height: 3vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1.5vw + 2vh);
+  letter-spacing: 0px;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+}
+
+.username-button:focus {
+  text-indent: 0.5vw;
+  outline: 3px solid #770092;
+}
+
+.password-button {
+  position: absolute;
+  top: 43%;
+  left: calc(50% - 10vw);
+  width: 20vw;
+  height: 3vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1.5vw + 2vh);
+  letter-spacing: 0px;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+}
+
+.password-button:focus {
+  text-indent: 0.5vw;
+  outline: 3px solid #770092;
+}
+
+.GagnantPerdant {
+  position: absolute;
+  top: 43%;
+  left: 28.5%;
+  width: 38vw;
+  height: 18vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(2.25vw + 2.75vh);
+  letter-spacing: 0px;
+  border: 3px solid rgba(232, 216, 230, 0.855);
+  border-radius: 8px;
+  margin: 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*
+PPPPPPPPPPPPPPPPP                                                                                                                                 lllllll   iiii                                             tttt            iiii                                     
+P::::::::::::::::P                                                                                                                                l:::::l  i::::i                                         ttt:::t           i::::i                                    
+P::::::PPPPPP:::::P                                                                                                                               l:::::l   iiii                                          t:::::t            iiii                                     
+PP:::::P     P:::::P                                                                                                                              l:::::l                                                 t:::::t                                                     
+  P::::P     P:::::P  eeeeeeeeeeee    rrrrr   rrrrrrrrr       ssssssssss      ooooooooooo   nnnn  nnnnnnnn    nnnn  nnnnnnnn      aaaaaaaaaaaaa    l::::l iiiiiii     ssssssssss     aaaaaaaaaaaaa  ttttttt:::::ttttttt    iiiiiii    ooooooooooo   nnnn  nnnnnnnn    
+  P::::P     P:::::Pee::::::::::::ee  r::::rrr:::::::::r    ss::::::::::s   oo:::::::::::oo n:::nn::::::::nn  n:::nn::::::::nn    a::::::::::::a   l::::l i:::::i   ss::::::::::s    a::::::::::::a t:::::::::::::::::t    i:::::i  oo:::::::::::oo n:::nn::::::::nn  
+  P::::PPPPPP:::::Pe::::::eeeee:::::eer:::::::::::::::::r ss:::::::::::::s o:::::::::::::::on::::::::::::::nn n::::::::::::::nn   aaaaaaaaa:::::a  l::::l  i::::i ss:::::::::::::s   aaaaaaaaa:::::at:::::::::::::::::t     i::::i o:::::::::::::::on::::::::::::::nn 
+  P:::::::::::::PPe::::::e     e:::::err::::::rrrrr::::::rs::::::ssss:::::so:::::ooooo:::::onn:::::::::::::::nnn:::::::::::::::n           a::::a  l::::l  i::::i s::::::ssss:::::s           a::::atttttt:::::::tttttt     i::::i o:::::ooooo:::::onn:::::::::::::::n
+  P::::PPPPPPPPP  e:::::::eeeee::::::e r:::::r     r:::::r s:::::s  ssssss o::::o     o::::o  n:::::nnnn:::::n  n:::::nnnn:::::n    aaaaaaa:::::a  l::::l  i::::i  s:::::s  ssssss     aaaaaaa:::::a      t:::::t           i::::i o::::o     o::::o  n:::::nnnn:::::n
+  P::::P          e:::::::::::::::::e  r:::::r     rrrrrrr   s::::::s      o::::o     o::::o  n::::n    n::::n  n::::n    n::::n  aa::::::::::::a  l::::l  i::::i    s::::::s        aa::::::::::::a      t:::::t           i::::i o::::o     o::::o  n::::n    n::::n
+  P::::P          e::::::eeeeeeeeeee   r:::::r                  s::::::s   o::::o     o::::o  n::::n    n::::n  n::::n    n::::n a::::aaaa::::::a  l::::l  i::::i       s::::::s    a::::aaaa::::::a      t:::::t           i::::i o::::o     o::::o  n::::n    n::::n
+  P::::P          e:::::::e            r:::::r            ssssss   s:::::s o::::o     o::::o  n::::n    n::::n  n::::n    n::::na::::a    a:::::a  l::::l  i::::i ssssss   s:::::s a::::a    a:::::a      t:::::t    tttttt i::::i o::::o     o::::o  n::::n    n::::n
+PP::::::PP        e::::::::e           r:::::r            s:::::ssss::::::so:::::ooooo:::::o  n::::n    n::::n  n::::n    n::::na::::a    a:::::a l::::::li::::::is:::::ssss::::::sa::::a    a:::::a      t::::::tttt:::::ti::::::io:::::ooooo:::::o  n::::n    n::::n
+P::::::::P         e::::::::eeeeeeee   r:::::r            s::::::::::::::s o:::::::::::::::o  n::::n    n::::n  n::::n    n::::na:::::aaaa::::::a l::::::li::::::is::::::::::::::s a:::::aaaa::::::a      tt::::::::::::::ti::::::io:::::::::::::::o  n::::n    n::::n
+P::::::::P          ee:::::::::::::e   r:::::r             s:::::::::::ss   oo:::::::::::oo   n::::n    n::::n  n::::n    n::::n a::::::::::aa:::al::::::li::::::i s:::::::::::ss   a::::::::::aa:::a       tt:::::::::::tti::::::i oo:::::::::::oo   n::::n    n::::n
+PPPPPPPPPP            eeeeeeeeeeeeee   rrrrrrr              sssssssssss       ooooooooooo     nnnnnn    nnnnnn  nnnnnn    nnnnnn  aaaaaaaaaa  aaaalllllllliiiiiiii  sssssssssss      aaaaaaaaaa  aaaa         ttttttttttt  iiiiiiii   ooooooooooo     nnnnnn    nnnnnn
+*/
+
+.couleurB-button {
+  position: absolute;
+  top: 16.5%;
+  left: 19.5%;
+  width: 16.5vw;
+  height: 11vh;
+  line-height: 4.5vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1.25vw + 1.75vh);
+  letter-spacing: 1px;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+}
+
+.couleurP-button {
+  position: absolute;
+  top: 16.5%;
+  left: 38.9%;
+  width: 16.5vw;
+  height: 11vh;
+  line-height: 4.5vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1.25vw + 1.75vh);
+  letter-spacing: 1px;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+}
+
+.avatarP-button {
+  position: absolute;
+  top: 16.5%;
+  left: 58.2%;
+  width: 16.5vw;
+  height: 11vh;
+  line-height: 2.75vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1.25vw + 1.75vh);
+  letter-spacing: 1px;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+}
+
+.openB-bouton1 {
+  position: absolute;
+  top: 32%;
+  left: 19.5%;
+  width: 16.5vw;
+  height: 62.5vh;
+  line-height: 2.75vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1vw + 1.5vh);
+  letter-spacing: 1px;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+}
+
+.balleB1 {
+  position: absolute;
+  top: 5%;
+  left: 40%;
+  width: 3vw;
+  height: 3vw; 
+  background-color: rgb(18, 52, 189);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.balleB2 {
+  position: absolute;
+  top: 25%;
+  left: 40%;
+  width: 3vw;
+  height: 3vw; 
+  background-color: rgb(191, 7, 7);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.balleB3 {
+  position: absolute;
+  top: 45%;
+  left: 40%;
+  width: 3vw;
+  height: 3vw; 
+  background-color: rgb(211, 103, 35); 
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.balleB4 {
+  position: absolute;
+  top: 65%;
+  left: 40%;
+  width: 3vw;
+  height: 3vw; 
+  background-color: rgb(16, 214, 188); 
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.balleB5 {
+  position: absolute;
+  top: 85%;
+  left: 40%;
+  width: 3vw;
+  height: 3vw; 
+  background-color: green; 
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.balleB.active {
+  transform: scale(1.5);
+  border: 4px solid rgba(72, 229, 96, 0.989);
+}
+
+.openP-bouton1 {
+  position: absolute;
+  top: 32%;
+  left: 38.9%;
+  width: 16.5vw;
+  height: 62.5vh;
+  line-height: 2.75vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1vw + 1.5vh);
+  letter-spacing: 1px;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+}
+
+.padP1 {
+  position: absolute;
+  top: 8.75%;
+  left: 27%;
+  height: 1.25vh;
+  width: 7.65vw;
+  border-radius: 8px;
+  background-color: rgb(18, 52, 189);
+  transition: top 0.1s;
+  cursor: pointer;
+}
+
+.padP2 {
+  position: absolute;
+  top: 28.75%;
+  left: 27%;
+  height: 1.25vh;
+  width: 7.65vw;
+  border-radius: 8px;
+  background-color: rgb(191, 7, 7);
+  transition: top 0.1s;
+  cursor: pointer;
+}
+
+.padP3 {
+  position: absolute;
+  top: 48.75%;
+  left: 27%;
+  height: 1.25vh;
+  width: 7.65vw;
+  border-radius: 8px;
+  background-color: rgb(211, 103, 35);
+  transition: top 0.1s;
+  cursor: pointer;
+}
+
+.padP4 {
+  position: absolute;
+  top: 68.75%;
+  left: 27%;
+  height: 1.25vh;
+  width: 7.65vw;
+  border-radius: 8px; 
+  background-color: rgb(16, 214, 188); 
+  transition: top 0.1s;
+  cursor: pointer;
+}
+
+.padP5 {
+  position: absolute;
+  top: 88.75%;
+  left: 27%;
+  height: 1.25vh;
+  width: 7.65vw;
+  border-radius: 8px;
+  background-color: green; 
+  transition: top 0.1s;
+  cursor: pointer;
+}
+
+.padP.active {
+  transform: scale(1.5);
+  border: 3px solid rgba(72, 229, 96, 0.989);
+}
+
+.openA-bouton1 {
+  position: absolute;
+  top: 32%;
+  left: 58.2%;
+  width: 16.5vw;
+  height: 62.5vh;
+  line-height: 2.75vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1vw + 1.5vh);
+  letter-spacing: 1px;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+}
+
+.avtP1 {
+  position: absolute;
+  top: 6%;
+  left: 8%;
+  width: 6vw;
+  height: 11vh;
+  line-height: 2.75vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1vw + 1.5vh);
+  letter-spacing: 1px;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+  cursor: pointer;
+}
+
+.avtP2 {
+  position: absolute;
+  top: 6%;
+  left: 55%;
+  width: 6vw;
+  height: 11vh;
+  line-height: 2.75vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1vw + 1.5vh);
+  letter-spacing: 1px;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+  cursor: pointer;
+}
+
+.avtP3 {
+  position: absolute;
+  top: 29.2%;
+  left: 8%;
+  width: 6vw;
+  height: 11vh;
+  line-height: 2.75vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1vw + 1.5vh);
+  letter-spacing: 1px;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+  cursor: pointer;
+}
+
+.avtP4 {
+  position: absolute;
+  top: 29.2%;
+  left: 55%;
+  width: 6vw;
+  height: 11vh;
+  line-height: 2.75vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1vw + 1.5vh);
+  letter-spacing: 1px;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+  cursor: pointer;
+}
+
+.avtP5 {
+  position: absolute;
+  top: 52.4%;
+  left: 8%;
+  width: 6vw;
+  height: 11vh;
+  line-height: 2.75vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1vw + 1.5vh);
+  letter-spacing: 1px;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+  cursor: pointer;
+}
+
+.avtP6 {
+  position: absolute;
+  top: 52.4%;
+  left: 55%;
+  width: 6vw;
+  height: 11vh;
+  line-height: 2.75vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1vw + 1.5vh);
+  letter-spacing: 1px;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+  cursor: pointer;
+}
+
+.avtP7 {
+  position: absolute;
+  top: 75.6%;
+  left: 8%;
+  width: 6vw;
+  height: 11vh;
+  line-height: 2.75vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1vw + 1.5vh);
+  letter-spacing: 1px;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+  cursor: pointer;
+}
+
+.avtP8 {
+  position: absolute;
+  top: 75.6%;
+  left: 55%;
+  width: 6vw;
+  height: 11vh;
+  line-height: 2.75vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1vw + 1.5vh);
+  letter-spacing: 1px;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+  cursor: pointer;
+}
+
+.avtP.active {
+  transform: scale(1.3);
+  border: 3px solid rgba(72, 229, 96, 0.989);
+}
+
+.avtP-css {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+/*
+     OOOOOOOOO                                  tttt            iiii                                     
+   OO:::::::::OO                             ttt:::t           i::::i                                    
+ OO:::::::::::::OO                           t:::::t            iiii                                     
+O:::::::OOO:::::::O                          t:::::t                                                     
+O::::::O   O::::::Oppppp   ppppppppp   ttttttt:::::ttttttt    iiiiiii    ooooooooooo   nnnn  nnnnnnnn    
+O:::::O     O:::::Op::::ppp:::::::::p  t:::::::::::::::::t    i:::::i  oo:::::::::::oo n:::nn::::::::nn  
+O:::::O     O:::::Op:::::::::::::::::p t:::::::::::::::::t     i::::i o:::::::::::::::on::::::::::::::nn 
+O:::::O     O:::::Opp::::::ppppp::::::ptttttt:::::::tttttt     i::::i o:::::ooooo:::::onn:::::::::::::::n
+O:::::O     O:::::O p:::::p     p:::::p      t:::::t           i::::i o::::o     o::::o  n:::::nnnn:::::n
+O:::::O     O:::::O p:::::p     p:::::p      t:::::t           i::::i o::::o     o::::o  n::::n    n::::n
+O:::::O     O:::::O p:::::p     p:::::p      t:::::t           i::::i o::::o     o::::o  n::::n    n::::n
+O::::::O   O::::::O p:::::p    p::::::p      t:::::t    tttttt i::::i o::::o     o::::o  n::::n    n::::n
+O:::::::OOO:::::::O p:::::ppppp:::::::p      t::::::tttt:::::ti::::::io:::::ooooo:::::o  n::::n    n::::n
+ OO:::::::::::::OO  p::::::::::::::::p       tt::::::::::::::ti::::::io:::::::::::::::o  n::::n    n::::n
+   OO:::::::::OO    p::::::::::::::pp          tt:::::::::::tti::::::i oo:::::::::::oo   n::::n    n::::n
+     OOOOOOOOO      p::::::pppppppp              ttttttttttt  iiiiiiii   ooooooooooo     nnnnnn    nnnnnn
+                    p:::::p                                                                              
+                    p:::::p                                                                              
+                   p:::::::p                                                                             
+                   p:::::::p                                                                             
+                   p:::::::p                                                                             
+                   ppppppppp    
+*/
+
+.fap-button {
+  position: absolute;
+  top: 20%;
+  left: 37%;
+  width: 20.5vw;
+  height: 11vh;
+  line-height: 2.75vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1.25vw + 1.75vh);
+  letter-spacing: 0px;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding: 10px 30px;
+}
+
+.toggle-fap {
+  position: absolute;
+  top: 23.8%;
+  left: 51.2%;
+}
+
+.emailText-button {
+  position: absolute;
+  top: 43%;
+  left: calc(50% - 15vw);
+  width: 24.2vw;
+  height: 5vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1.5vw + 1vh);
+  letter-spacing: 0px;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+}
+
+.emailText-button:focus {
+  text-indent: 0.5vw;
+  outline: 3px solid #770092;
+}
+
+.confirm-button {
+  position: absolute;
+  top: 52%;
+  left: 37%;
+  width: 20.5vw;
+  height: 11vh;
+  line-height: 2.75vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1.25vw + 1.75vh);
+  letter-spacing: 0px;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+  cursor: pointer;
+}
+
+.email-div {
+  position: absolute;
+  top: 35%;
+  left: 37%;
+  width: 24.2vw;
+  height: 5vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1.5vw + 2vh);
+  letter-spacing: 0px;
+  border: 3px solid transparent(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+}
+
+.texteCodeVerif {
+  position: absolute;
+  top: 25%;
+  left: 37%;
+  width: 24.2vw;
+  height: 5vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1.5vw + 2vh);
+  letter-spacing: 0px;
+  border: 3px solid transparent(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+}
+
+.inputCodeVerif {
+  position: absolute;
+  top: 35%;
+  left: 37%;
+  width: 20.2vw;
+  height: 5vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1.5vw + 2vh);
+  letter-spacing: 0px;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+}
+
+.bouttonCodeVerif {
+  position: absolute;
+  top: 45%;
+  left: 36%;
+  width: 22.2vw;
+  height: 8vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1.5vw + 2vh);
+  letter-spacing: 0px;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+  cursor: pointer;
+}
+
+.changePseudo-button {
+  position: absolute;
+  top: 74%;
+  left: 50%;
+  width: 19vw;
+  height: 11vh;
+  line-height: 2.75vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1.25vw + 1.75vh);
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+  cursor: pointer;
+}
+
+.pseudoText-button {
+  position: absolute;
+  top: 76.75%;
+  left: 28%;
+  width: 20vw;
+  height: 5vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1.5vw + 1vh);
+  letter-spacing: 0px;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+}
+
+.pseudoText-button:focus {
+  text-indent: 0.5vw;
+  outline: 3px solid #770092;
+}
+
+.choixPseudo-button {
+  position: absolute;
+  top: 27.5%;
+  left: 37.5%;
+  width: 19vw;
+  height: 11vh;
+  line-height: 2.75vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1.25vw + 1.75vh);
+  border: 3px solid transparent;
+  border-radius: 8px;
+  margin: 0px 0px;
+}
+
+.choixPseudoText-button {
+  position: absolute;
+  top: 35%;
+  left: 36.5%;
+  width: 20vw;
+  height: 5vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1.5vw + 1vh);
+  letter-spacing: 0px;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+}
+
+.confirmPseudo-button {
+  position: absolute;
+  top: 42%;
+  left: 39%;
+  width: 15vw;
+  height: 8vh;
+  line-height: 2.75vh;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1.25vw + 1.75vh);
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 8px;
+  margin: 0px 0px;
+}
+
+.choixPseudoText-button:focus {
+  text-indent: 0.5vw;
+  outline: 3px solid #770092;
+}
+
+/*
+        CCCCCCCCCCCCChhhhhhh                                       tttt          
+     CCC::::::::::::Ch:::::h                                    ttt:::t          
+   CC:::::::::::::::Ch:::::h                                    t:::::t          
+  C:::::CCCCCCCC::::Ch:::::h                                    t:::::t          
+ C:::::C       CCCCCC h::::h hhhhh         aaaaaaaaaaaaa  ttttttt:::::ttttttt    
+C:::::C               h::::hh:::::hhh      a::::::::::::a t:::::::::::::::::t    
+C:::::C               h::::::::::::::hh    aaaaaaaaa:::::at:::::::::::::::::t    
+C:::::C               h:::::::hhh::::::h            a::::atttttt:::::::tttttt    
+C:::::C               h::::::h   h::::::h    aaaaaaa:::::a      t:::::t          
+C:::::C               h:::::h     h:::::h  aa::::::::::::a      t:::::t          
+C:::::C               h:::::h     h:::::h a::::aaaa::::::a      t:::::t          
+ C:::::C       CCCCCC h:::::h     h:::::ha::::a    a:::::a      t:::::t    tttttt
+  C:::::CCCCCCCC::::C h:::::h     h:::::ha::::a    a:::::a      t::::::tttt:::::t
+   CC:::::::::::::::C h:::::h     h:::::ha:::::aaaa::::::a      tt::::::::::::::t
+     CCC::::::::::::C h:::::h     h:::::h a::::::::::aa:::a       tt:::::::::::tt
+        CCCCCCCCCCCCC hhhhhhh     hhhhhhh  aaaaaaaaaa  aaaa         ttttttttttt  
+*/
+
+.message h1 {
+  font-size: 2rem;
+  margin: 0;
+  margin-left: 2%;
+  width: max-content;
+  cursor: pointer;
+  font-size: calc(1vw + 1.5vh);
+  /* word-break: break-all; */
+  /* background: green; */
+}
+
+.message p {
+  font-size: 1.7rem;
+  margin: 0;
+  /* background: red; */
+  margin-left: 2%;
+  word-break: break-all;
+  font-size: calc(0.75vw + 1.25vh);
+}
+
+.message {
+  display: flex;
+  /* flex-wrap: wrap; */
+  align-items: flex-start;
+}
+
+.friend img {
+  width: 3vw;
+  height: 3vw;
+  padding: 0;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 100px;
+  margin: 0px 0px;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+.friend h1 {
+  margin-left: 3%;
+  padding: 0;
+  word-break: break-all;
+}
+
+.friend {
+  display: flex;
+  font-size: calc(0.5vw + 1vh);
+  margin: 2% 0 0 2%;
+  align-items: center;
+  height: max-content;
+}
+
+.button {
+  background-color: transparent;
+  width: 14.5vw;
+  height: 5vh;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(0.5vw + 1vh);
+  letter-spacing: 1px;
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 8px;
+  display: block;
+  cursor: pointer;
+  margin: 5% calc(50% - 14.5vw / 2);
+  box-sizing: border-box;
+}
+
+.button-back {
+  width: 5vh;
+  border-radius: 50%;
+  font-size: calc(1vw + 1.5vh);
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.button-back svg {
+  transform: rotate(180deg);
+  fill: rgba(195, 171, 195, 0.989);
+  scale: 0.7;
+}
+
+.topBar h1 {
+  font-size: calc(1vw + 1.5vh);
+  word-break: break-all;
+}
+
+.topBar {
+  display: flex;
+  position: sticky;
+  top: 0;
+  background: linear-gradient(to bottom, #B42876, #9F1F7F);
+  border-bottom: 3px solid rgba(195, 171, 195, 0.989);
+  align-items: center;
+}
+
+.new-channel {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+  margin-top: 1.25vh;
+}
+
+.channel-name, .channel-password, .channel-type {
+  cursor: auto;
+  padding: 0;
+  padding-left: 0.5vw;
+}
+
+.create-channel
+{
+  cursor: pointer;
+  padding-left: 0;
+}
+
+.popover button {
+  background: linear-gradient(to bottom, #B42876, #9F1F7F);
+}
+
+.popover {
+  box-sizing: border-box;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 15vw;
+  padding: 0;
+  border-radius: 10px;
+}
+
+.popover h1 {
+  text-align: center;
+  vertical-align: middle;
+  width: 10vw;
+  margin: auto;
+  font-size: calc(0.5vw + 1vh);
+  background: linear-gradient(to bottom, #B42876, #9F1F7F);
+  border: 3px solid rgba(195, 171, 195, 0.989);
+  border-radius: 10px;
+}
+
+.buttons h1 {
+  font-size: calc(1vw + 1.5vh);
+  text-align: center;
+}
+
+.pseudoDefi {
+  position: fixed;
+  top: 30%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(2.25vw + 2.75vh);
+  letter-spacing: 0px;
+  margin: 50px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.yesDefi {
+  position: absolute;
+  top: 42%;
+  left: 36%;
+  width: 10vw;
+  height: 5h;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1.5vw + 2vh);
+  letter-spacing: 0px;
+  border: 3px solid rgba(232, 216, 230, 0.855);
+  border-radius: 8px;
+  margin: 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.noDefi {
+  position: absolute;
+  top: 42%;
+  left: 48%;
+  width: 10vw;
+  height: 5h;
+  background-color: transparent;
+  color: rgba(232, 216, 230, 0.855);
+  padding: 0px 0px;
+  font-family: Impact, Anton, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: calc(1.5vw + 2vh);
+  letter-spacing: 0px;
+  border: 3px solid rgba(232, 216, 230, 0.855);
+  border-radius: 8px;
+  margin: 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

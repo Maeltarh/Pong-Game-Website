@@ -1,0 +1,32 @@
+.progress-bar {
+	width: 33.75vw;
+	height: 2vh;
+	background-color: transparent;
+	border: 3px solid rgba(195, 171, 195, 0.989);
+	border-color: rgba(232, 216, 230, 0.855);;
+	border-radius: 5px;
+  }
+  
+  .progress-bar-fill {
+	height: 2vh;
+	background-color: #a260d1;
+	border-radius: 0px;
+	transition: width 0.4s ease-in-out;
+  }
+  
+.gameCount-bar {
+	width: 33.75vw;
+	height: 4vh;
+	background-color: transparent;
+	border: 3px solid rgba(195, 171, 195, 0.989);
+	border-color: rgba(232, 216, 230, 0.855);;
+	border-radius: 5px;
+  }
+  
+  .gameCount-bar-fill {
+	height: 4vh;
+	background-color: #a260d1;
+	border-radius: 0px;
+	transition: width 0.4s ease-in-out;
+  }
+  
